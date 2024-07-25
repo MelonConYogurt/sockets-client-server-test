@@ -4,6 +4,15 @@ HOST = '127.0.0.1'  # Dirección IP del servidor
 PORT = 65432        # Puerto de conexión
 
 def recibir_y_mostrar(s):
+    """
+    Recibe datos del servidor y los muestra en la consola.
+
+    Parametros:
+    s (socket): El socket de conexión con el servidor.
+
+    Returns:
+    bool: True si se recibieron y mostraron los datos correctamente, False en caso contrario.
+    """
     try:
         data = s.recv(1024).decode('utf-8')
         if not data:

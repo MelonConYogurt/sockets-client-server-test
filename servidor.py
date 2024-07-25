@@ -9,6 +9,16 @@ HOST = '127.0.0.1'  # Dirección IP del servidor
 PORT = 65432        # Puerto de conexión
 
 def manejar_cliente(conn, addr):
+    """
+    Maneja la conexión con un cliente.
+
+    Parametros
+    - conn: objeto de conexión del cliente
+    - addr: dirección del cliente
+
+    Returns:
+    None
+    """
     print(f"Conectado a {addr}")
     try:
         while True:
